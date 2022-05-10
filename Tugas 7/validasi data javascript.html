@@ -1,0 +1,57 @@
+<html>
+
+    <head>
+
+        <title>Membuat Validasi</title>
+
+        <script LANGUAGE="JAVASCRIPT">
+        function ValidasiForm()
+
+        {
+        if (document.FormTamu.nama.value=="") { alert("Kolom nama tidak boleh kosong"); return false;
+        }
+        if (document.FormTamu.alamat.value=="") { alert("Kolom Alamat tidak boleh kosong"); return false;
+        }
+        if (document.FormTamu.email.value=="") { alert("Kolom Email tidak boleh kosong"); return false;
+        }
+        }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <form  onSubmit="return ValidasiForm()" name="FormTamu" method="post" action="">
+        <table class="table" width="3O7" border="O" cellspacing="O" cellpadding="3">
+        <tr align="left" bgcolor="#OOFFOO">
+        <th colspan="2" scope="col">Form Validasi </th>
+        </tr>
+
+        <tr>
+        <td width="92">Nama </td>
+        <td width="246">
+        <input name="nama" type="text" id="nama" size="25" maxlength="35"></td>
+        </tr>
+
+        <tr>
+        <td>Alamat</td>
+        <td><input name="alamat" type="text"  id="alamat" size="25" maxlength="35"></td>
+        </tr>
+
+        <tr>
+        <td>Email</td>
+        <td><input name="email" type="text"   id="email" size="25" maxlength="35"></td>
+        </tr>
+
+        <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" name="Submit" value="Kirim"></td>
+        </tr>
+        </table>
+
+        </form>
+
+    </body>
+    
+</html>
