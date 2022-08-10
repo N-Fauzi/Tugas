@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    z-index: 12;
+    width: 360px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 20px 50px rgba(86, 71, 71, 0.15);
+    border-top: 1px solid rgba(224, 206, 206, 0.29);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#ffffff , #fdfcfe , #ffffff);    
+}
+.head {
+    background: linear-gradient(#797070 , #d6d1db , #797070);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px white;
+    border-top: 2px solid rgb(98, 86, 86);
+    border-bottom: 2px solid #af9c9c71;
+
+}
+h1,h2,h3{
+    text-align: center;
+}
+.cbarang{
+    text-align: center;
+    margin-bottom: 20px;
+    background: whitesmoke;
+    border-radius: 20px;
+    border-top: 2px solid rgb(153, 126, 126);
+    border-bottom: 2px solid #af9c9c71;
+}
+.ajumlah{
+    padding-left: 2px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.aharga{
+    padding-left: 2px;
+    margin-bottom: 5px;
+    margin-left: 21px;
+}
+.atotal{
+    padding-left: 2px;
+    margin-bottom: 5px;
+    margin-left: 32px;
+}
+.abayar{
+    padding-left: 2px;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+.adiskon{
+    padding-left: 2px;
+    margin-bottom: 10px;
+    margin-left: 19px;
+}
+
+.proses {
+    margin-left: 100px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: linear-gradient(#e9e3e3, #000000ed);
+    border-radius: 10px;
+    border-top: 1px solid rgba(251, 251, 251, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.reset {
+    margin-left: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: linear-gradient(#e9e3e3, #000000ed);
+    border-radius: 10px;
+    border-top: 1px solid rgba(251, 251, 251, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}

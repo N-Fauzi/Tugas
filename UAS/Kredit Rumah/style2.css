@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    z-index: 12;
+    width: 360px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+#containerrincian{
+    z-index: 12;
+    width: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#f8f8f8 , #ada2b3 , #ffffff);
+}
+h1{
+    text-align: center;
+}
+#tiperumah{
+    margin-bottom: 6px;
+    background: whitesmoke;
+    border-radius: 20px;
+    border-top: 2px solid rgb(153, 126, 126);
+    border-bottom: 2px solid #af9c9c71;
+    margin-left: 25px;
+    padding-left: 17px;
+    padding-right: 17px; 
+}
+#hargarumah{
+    margin-bottom: 6px;
+    background: whitesmoke;
+    border-radius: 20px;
+    border-top: 2px solid rgb(153, 126, 126);
+    border-bottom: 2px solid #af9c9c71;
+    margin-left: 4px;
+}
+#uangmuka{
+    margin-bottom: 6px;
+    background: whitesmoke;
+    border-radius: 20px;
+    border-top: 2px solid rgb(153, 126, 126);
+    border-bottom: 2px solid #af9c9c71;
+    margin-left: 25px;
+}
+#sisa{
+    margin-bottom: 6px;
+    background: whitesmoke;
+    border-radius: 20px;
+    border-top: 2px solid rgb(153, 126, 126);
+    border-bottom: 2px solid #af9c9c71;
+    margin-left: 83px;
+}
+#kredit {
+    margin-bottom: 6px;
+    background: whitesmoke;
+    border-radius: 20px;
+    border-top: 2px solid rgb(153, 126, 126);
+    border-bottom: 2px solid #af9c9c71;
+    margin-left: 20px;
+}
+#angsuran {
+    margin-bottom: 6px;
+    background: whitesmoke;
+    border-radius: 20px;
+    border-top: 2px solid rgb(153, 126, 126);
+    border-bottom: 2px solid #af9c9c71;
+    margin-left: 38px;
+}
+#reset {
+    margin-left: 69%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(#e9e3e3, #ff0000ed);
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(251, 251, 251, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}

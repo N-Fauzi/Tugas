@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS-MuhammadNurFauzi-20210121027</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head"><h1>PROGRAM PENGGAJIAN PT. MISAL A</h1></div>
+        <form name="gajipegawai">
+            <p></p>
+            <!--Input-->
+            <div class="list">
+            Nama Pegawai
+            <input type="text" name="namapegawai" class="namapegawai" id="namapegawai">
+            
+            Jam Kerja
+            <input type="text" name="jamkerja" class="jamkerja" id="jamkerja">
+            <p></p>
+            Upah per Jam
+            <input type="text" name="upah" class="upah" id="upah">
+            <p></p>
+            Anak
+            <input type="text" name="anak" class="anak" id="anak">
+            <p></p>
+            <!--Output-->
+            Gaji
+            <input type="text" name="gaji" class="gaji" id="gaji">
+            <p></p>
+            Tunjangan Anak
+            <input type="text" name="tunjangan" class="tunjangan" id="tunjangan">
+            <p></p>
+            Total Gaji
+            <input type="text" name="totalgaji" class="totalgaji" id="totalgaji">
+        </div>
+            <p></p><br>
+            <input type="button" name="cek" value="Proses" onclick="penggajian();" class="proses">
+            <input type="reset" value="Reset" class="reset">
+        </form>
+            <script>
+            function penggajian() {
+                var jamkerja = document.gajipegawai.jamkerja.value;
+                var upah = document.gajipegawai.upah.value;
+                var anak = document.gajipegawai.anak.value;
+                var tunjangan = document.gajipegawai.tunjangan.value;
+                
+                var gaji = jamkerja*upah;
+                var tunjangan = gaji*(anak/10);
+                var totalgaji = tunjangan + gaji;
+           
+                document.gajipegawai.gaji.value = gaji;
+                document.gajipegawai.tunjangan.value = tunjangan.toFixed(0);
+                document.gajipegawai.totalgaji.value = totalgaji.toFixed(0);
+                
+            }
+    </script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS-MuhammadNurFauzi-20210121027</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> PENJUALAN BARANG </h1>
+        <!-- Nama Judul -->
+        <form name="Diskon">
+            <p></p>
+            Barang
+            <!--input nama barang-->
+            <input type="text" name="barang" class="barang">
+            <p></p>
+            Harga
+            <!--input harga --> 
+            <input type="text" name="harga" class="harga">
+            <p></p>
+            Jumlah
+            <!--input jumlah-->
+            <input type="text" name="jumlah" class="jumlah">
+            <p></p><hr>
+            <!--------------------GARIS-------------------->
+            Total
+            <!--output sebelum diskon--> 
+            <input type="text" name="total" class="total">
+            <br>
+            Diskon
+            <!--input persen -->
+            <input type="text" name="discon" class="discon">
+            <br>
+            
+            Bayar
+            <!--output sesudah diskon-->
+            <input type="text" name="hargadiskon" class="hargadiskon">
+            <p></p><br>
+            <input type="button" name="cek" value="Proses" onclick="diskon();" class="proses">
+            <input type="reset" value="Reset" class="reset">
+        </form>
+        
+ 
+        <script type="text/javascript" src="diskon.js">
+        </script>
+    </div>
+</body>
+</html>

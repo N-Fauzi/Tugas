@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <table border="1">
+            <tr>
+                <td>Nama Pelanggan  </td>
+                <td><input type="text" name="" id="aaa" class="nama"></td>
+            </tr>
+            <tr>
+                <td>Kategori  </td>
+                <td><select name="astatus" id="astatus" class="status" onchange="pln()">
+                    <option hidden></option>
+                    <option value="asosial">Sosial</option>
+                    <option value="arumah">Rumah</option>
+                    <option value="aindustri">Industri</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Pemakaian Listrik  </td>
+                <td><input type="text" name="" id="plistrik" class="plistrik"></td>
+            </tr>
+
+        </table>
+        
+        
+           <p></p><br>
+        <div class="container-1">
+            <table border="1">
+                <tr>
+                    <td>Kategori</td>
+                    <td>Abodemen</td>
+                    <td>Tarif Per-KWH</td>
+                    <td>Pajak</td>
+                </tr>
+                <tr>
+                    <td>Sosial</td>
+                    <td>10000</td>
+                    <td>300</td>
+                    <td>0%</td>
+                </tr>
+                <tr>
+                    <td>Rumah</td>
+                    <td>30000</td>
+                    <td>500</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>Industri</td>
+                    <td>50000</td>
+                    <td>1000</td>
+                    <td>30%</td>
+                </tr>
+            </table>
+            <br>
+    <div class="container-2">
+        <table>
+        Subtotal
+        <input type="text" value="" id="stotal" class="total" readonly><br>
+        Pajak
+        <input type="text" name="" id="spajak" class="pajak" readonly><br>
+        bayar
+        <input type="text" name="" id="sbayar" class="bayar" readonly>
+    </table>
+        <input type="button" id="proses" value="Proses" onclick="pln()">
+        <input type="reset" value="Reset" id="reset">
+    </div>
+        </div>
+    </div>
+    
+    <div class="containerrincian">
+        <table border="1">
+        <h2>Rincian Tagihan</h2>
+        <tr>
+            <td>Jumlah</td>
+            <td>Tarif</td>
+            <td>Abodemen</td>
+            <td>Subtotal</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>500</td>
+            <td>30000</td>
+            <td>30500</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1000</td>
+            <td>30000</td>
+            <td>31000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>1500</td>
+            <td>30000</td>
+            <td>31500</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2000</td>
+            <td>30000</td>
+            <td>32000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>2500</td>
+            <td>30000</td>
+            <td>32500</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>3000</td>
+            <td>30000</td>
+            <td>33000</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>3500</td>
+            <td>30000</td>
+            <td>33500</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>4000</td>
+            <td>30000</td>
+            <td>34000</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>4500</td>
+            <td>30000</td>
+            <td>34500</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>5000</td>
+            <td>30000</td>
+            <td>35000</td>
+        </tr>
+    </table>
+    </div>
+
+    <script>
+        function pln (){
+            var p_listrik = document.getElementById("plistrik").value;
+            //input untuk kali lalu mengeluarkan hasil Subtotal
+            if(astatus.value == "asosial"){
+                var pajak = 0;
+                var abonemen = 10000;
+                var tarif = 300;
+                var stotal = abonemen + (p_listrik*tarif);
+                var rpajak = stotal*pajak;
+            }else if(astatus.value == "arumah"){
+                var pajak = 0.10;
+                var abonemen = 30000;
+                var tarif = 500;
+                var stotal = abonemen + (p_listrik*tarif);
+                var rpajak = stotal*pajak;
+            }else if(astatus.value == "aindustri"){
+                var pajak = 0.30;
+                var abonemen = 50000;
+                var tarif = 1000;
+                var stotal = abonemen + (p_listrik*tarif);
+                var rpajak = stotal*pajak;
+            }else {
+                
+            }
+            
+            var total = stotal + rpajak;
+            document.getElementById("sbayar").value=total;
+            document.getElementById("spajak").value=parseInt (rpajak);
+            document.getElementById("stotal").value=stotal;
+            }
+    </script>
+</body>
+</html>

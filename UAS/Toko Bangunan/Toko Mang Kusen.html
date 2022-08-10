@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS-MuhammadNurFauzi-20210121027</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DAFTAR HARGA BARANG</h1>
+        <form name="form" id="form">    
+            <hr><br>
+            Nama Barang
+            <select id="ibarang" name="barang" onchange="price()" class="barang">
+                <option value="" hidden>List</option>
+                <option value="4000">Paku </option>
+                <option value="2500">Semen</option>
+                <option value="5000">Pasir</option>    
+                <option value="2000">Kawat</option>
+                <option value="4000">Kerikil</option>
+            </select>
+            <p></p>
+            Jumlah
+            <input type="text" name="jumlah" id="jumlah" placeholder="Jumlah Barang" class="jumlah">
+            <p></p>
+            Harga 
+            <input type="text" name="harga" id="harga" placeholder="Harga Barang" class="harga">
+            <p></p>
+            Total
+            <input type="text" name="total" id="total" placeholder="Total" class="total">
+            <br><br><hr><br>
+            <input type="button" name="cek" value="Proses" onclick="price()" class="proses">
+            <input type="reset" value="Reset" class="reset">
+        </form>
+        <script>
+            function price() {
+            var barang = document.getElementById("ibarang").value;
+            document.getElementById("harga").value=barang;
+            var jumlah = document.getElementById("jumlah").value;
+            var total = (jumlah) * parseInt(barang);
+            document.getElementById("total").value=(total);
+            }
+        </script>
+    </div>
+</body>
+</html>

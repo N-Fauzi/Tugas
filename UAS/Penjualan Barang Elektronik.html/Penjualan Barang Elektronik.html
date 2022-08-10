@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <form name="form1">
+            <div class="head">
+                <h1>PENJUALAN BARANG ELEKTRONIK</h1>
+            </div>
+            <br>
+            <hr><br>
+            <h3>List Barang</h3> <br>
+            <div class="cbarang">
+            <input type="checkbox" id="cusb" class="cusb" onchange="cekbox()">
+            USB
+            <input type="checkbox" id="cmemori" class="cmemori" onchange="cekbox()">
+            Memory
+            <input type="checkbox" id="cspeaker" class="cspeaker" onchange="cekbox()">
+            Speaker
+            <br>
+            </div>
+            Jumlah  <input type="text" name="ajumlah" id="ajumlah" class="ajumlah" placeholder="Jumlah Barang">
+            <br>
+            Harga   <input type="text" name="aharga" id="aharga" class="aharga" placeholder="Harga Barang" readonly>
+            <br>
+
+            <br>
+            Total  <input type="text" name="atotal" id="atotal" class="atotal" placeholder="Jumlah" readonly>
+            <br>
+            Diskon  <input type="text" name="adiskon" id="adiskon" class="adiskon" placeholder="diskon" readonly>
+            <br>
+            Bayar  <input type="text" name="abayar" id="abayar" class="abayar" placeholder="Jumlah Yang DiBayar" readonly>
+            <br><br><hr>
+            <input type="button" value="Proses" class="proses" onclick="cekbox()">
+            <input type="reset" value="Reset" class="reset">
+        </form>
+        <script>
+            function cekbox(){
+                var jumlah = document.getElementById("ajumlah").value;
+                var usb = 0;
+                var memori = 0;
+                var speaker =0;
+                if (document.form1.cusb.checked) var usb = 50000;
+                if (document.form1.cmemori.checked) var memori = 120000;
+                if (document.form1.cspeaker.checked) var speaker = 40000;
+                var a=usb;
+                var b=memori;
+                var c=speaker;
+                var total = jumlah*(a+b+c);
+                var dd = a+b+c;
+                document.getElementById("aharga").value = (dd);
+                document.getElementById("atotal").value = (total);
+                var diskon = total*0.1;
+                document.getElementById("adiskon").value=diskon;
+                var bayar = total - diskon;
+                document.getElementById("abayar").value=bayar;
+                
+                
+            }
+        </script>
+    </div>
+</body>
+</html>

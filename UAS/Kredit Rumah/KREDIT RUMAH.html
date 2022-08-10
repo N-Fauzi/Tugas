@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PROGRAM KREDIT RUMAH</h1>
+        <form name="form1">
+            <hr>
+           
+                TIPE RUMAH  
+                <select id="tiperumah" onchange="jualbeli()">
+                    <option hidden>Pilih Tipe Rumah</option>
+                    <option value="120000000">Gondwana</option>
+                    <option value="130000000">Pangea</option>
+                    <option value="140000000">Rodinia</option>
+                </select>
+                <br>
+                Lama Kredit <input type="text" name="kredit" id="kredit" placeholder="Lama Kredit">
+                Harga Rumah <input type="text" name="" id="hargarumah" readonly placeholder="Harga Rumah">
+                Uang Muka <input type="text" name="" id="uangmuka" readonly placeholder="Uang Muka">
+                <br>
+                Sisa <input type="text" name="" id="sisa" readonly placeholder="Sisa">
+                <br>
+                
+                Angsuran <input type="text" name="" id="angsuran" readonly onchange="jualbeli()" placeholder="Angsuran ">
+                <input type="reset" value="Reset" id="reset">
+        </form>
+    </div>
+
+    </div>
+    <script>
+        function jualbeli(){
+        var angsuran_rumah = document.getElementById("angsuran").value;
+        var tipe_rumah = document.getElementById("tiperumah").text;
+        var kredit=document.getElementById("kredit").value;
+        var sisa = document.getElementById("sisa").value;
+        var kredit = document.getElementById("kredit").value;
+        var uangmuka = 0.20;
+        var harga_rumah = document.getElementById("tiperumah").value;
+        document.getElementById("hargarumah").value=harga_rumah;
+        var total = harga_rumah*uangmuka;
+        var sisa1 =  harga_rumah-total;
+        var akredit = parseInt (sisa / kredit);
+        document.getElementById("angsuran").value=akredit;
+        document.getElementById("sisa").value=sisa1;
+        document.getElementById("tiperumah").text=tipe_rumah;
+        document.getElementById("uangmuka").value=total;
+        }
+    </script>
+</body>
+</html>

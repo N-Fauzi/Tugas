@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DAFTAR MOTOR</h1> 
+        <hr><hr><br>
+        <form name="form">
+           Merk Motor 
+           <select name="tipe" id="tipe" onchange="timo()">
+            <option hidden></option>
+            <option value="15000000" >Honda</option>
+            <option value="14000000" >Yamaha</option>
+            <option value="13000000" >Suzuki</option>
+           </select> 
+           <p></p>
+           <div class="accm">
+            <p>Aksesoris</p>
+            <tr><td><input type="checkbox"  name="velg" id="acc1" onclick="timo()">Velg Racing</td></tr>
+            <tr><td> <input type="checkbox" name="helm" id="acc2" onclick="timo()">Helm</td></tr>
+            <tr><td><input type="checkbox"  name="jaket" id="acc3" onclick="timo()">Jaket</td></tr>
+           <p></p>
+            </div>
+           <div class="pay" onchange="timo()">Cara Pembayaran
+           <input type="radio" name="status" id="tunai" >
+           Tunai
+           <p></p>
+           <input type="radio" name="status" id="kredit" >
+           Kredit
+            </div>
+
+           <p></p>
+           Harga Motor
+           <input type="text" name="" id="hargam" readonly>
+           <p></p>
+           Harga Aksesoris
+           <input type="text" name="" id="harga" readonly>
+           <p></p>
+           Diskon 
+           <input type="text" name="" id="diskon" readonly>
+           <p></p>
+           Total 
+           <input type="text" name="" id="total" readonly>
+           
+           <input type="reset" value="Reset" class="reset">
+        </form>
+        <script>
+            function timo(){
+                var x = document.getElementById("tipe").value;
+                document.getElementById("hargam").value=x;
+                
+                var harga_velg=0, harga_jaket=0, harga_helm=0;
+                if (document.form.velg.checked) var harga_velg =450000;
+                if(document.form.helm.checked) var harga_helm =250000;
+                if(document.form.jaket.checked) var harga_jaket =300000;
+                //harga acc tidak terkena diskon
+                var total=harga_helm+harga_jaket+harga_velg;
+                //total harga dari acc
+                var total1= total + parseInt (x);
+                if (document.form.status[0].checked==true)
+                //diskon motor 15% jika tunai
+                tunai = x*0.10;
+                else 
+                //operasi bunga motor 15% perbulan jika kredit selama 12 bulan
+                tunai = parseInt(x/12+(x/12*0.15));
+                statusbyr = tunai + total1;
+                document.getElementById("diskon").value=(tunai)
+                //output untuk cara pembayaran
+                document.form.harga.value=total;
+                document.getElementById("total").value=(statusbyr);
+                //output penjumlahan dari variable total + x(motor) + diskon
+            } 
+        </script>
+    </div>
+</body>
+</html>
